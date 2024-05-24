@@ -44,6 +44,7 @@ TBD
 <a href="https://github.com/Erikrainer/RandG-SocialNetwork/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Erikrainer/RandG-SocialNetwork" />
 </a>
+
 Erikrainer
 
 ## Tests 🧪
