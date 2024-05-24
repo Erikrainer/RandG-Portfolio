@@ -4,11 +4,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
-import Error from './components/Pages/Error';
-import Home from './components/Pages/Home';
-import Contact from './components/Pages/Contact';
-import About from './components/Pages/About';
-import Project from './components/Pages/Project';
+import Error from './pages/ErrorPage';
+import Home from './pages/HomePage';
+import Contact from './pages/ContactPage';
+import About from './pages/AboutPage';
+import Project from './pages/ProjectPage';
 
 
 const router = createBrowserRouter([

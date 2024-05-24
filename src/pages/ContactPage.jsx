@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import './style.css';
 
-const Contact = () => {
+function Contact () {
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -33,11 +32,6 @@ const handleFormSubmit = (event) => {
     setSubject("");
     setMessage("");
 }
-
-if (!validateEmail(email) || !firstName) {
-    setErrorMessage('Email or username is invalid');
-    return;
-  }
 
   return (
     <div className= "container text-center">

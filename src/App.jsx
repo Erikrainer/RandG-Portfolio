@@ -1,18 +1,18 @@
-import PortfolioContainer from "./components/PortfolioContainer";
 import { Outlet } from 'react-router-dom';
-import Header from "./components/UI/Header"
-import Footer from "./components/UI/Footer"
+import Nav from './components/Nav';
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+function App() {
 
-const App = () => {
   return (
-  <>
-  <PortfolioContainer />
-  <Header />
-  <main className="mx-3">
-    <Outlet />
-  </main>
-  <Footer />
-  </>
+    <>
+    <Header/>
+      <Nav />
+      <main className="mx-3">
+        <Outlet />
+      </main>
+      <Footer/>
+    </>
   );
 }
 
