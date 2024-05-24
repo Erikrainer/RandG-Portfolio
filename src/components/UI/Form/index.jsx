@@ -3,8 +3,9 @@ import './style.css';
 
 const Form = () => {
     const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleInputChange = (event) => {
@@ -16,8 +17,10 @@ const Form = () => {
         setEmail(inputValue);
     } else if (inputType === 'firstName') {
         setFirstName(inputValue);
+    } else if (inputType === "subject"){
+        setSubject(inputValue);
     } else {
-        setLastName(inputValue);
+        setMessage(inputValue);
     }
 };
 
@@ -26,19 +29,19 @@ const handleFormSubmit = (event) => {
     event.preventDefault();
 
     setFirstName('');
-    setLastName("");
     setEmail("");
+    setSubject("");
+    setMessage("");
 }
 
 if (!validateEmail(email) || !firstName) {
     setErrorMessage('Email or username is invalid');
     return;
   }
-  alert(`Hello ${firstName}`);
 
   return (
     <div className= "container text-center">
-        <h1>Hello {firstName} </h1>
+        <h1>Contact Me</h1>
         <form className= "form" onSubmit={handleFormSubmit}>
             <input
                 value={firstName}
@@ -48,20 +51,27 @@ if (!validateEmail(email) || !firstName) {
                 placeholder="First name"
             />
             <input
-                value={lastName}
-                name="lastName"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Last name"
-            />
-            <input
                 value={email}
                 name="email"
                 onChange={handleInputChange}
                 type="email"
                 placeholder="email"
             />
-            <button type="submit">Submit</button>
+            <input
+                value={subject}
+                name="subject"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Subject"
+            />
+            <input
+                value={message}
+                name="message"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Message"
+            />
+            <button type="submit">Send Feedback</button>
         </form>
         {errorMessage && (
             <div>
