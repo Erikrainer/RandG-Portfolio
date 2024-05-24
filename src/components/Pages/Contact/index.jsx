@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 
-const Form = () => {
+const Contact = () => {
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -85,4 +85,4 @@ if (!validateEmail(email) || !firstName) {
 
 
 
-export default Form;
+export default Contact;
