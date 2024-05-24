@@ -1,7 +1,9 @@
-import Form from "./components/Form";
+import PortfolioContainer from "./components/PortfolioContainer"
 
-function App() {
-  return <Form />;
+const App = () => {
+  return (
+  <PortfolioContainer />
+  );
 }
 
 export default App;
