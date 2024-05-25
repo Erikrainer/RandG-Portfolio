@@ -1,0 +1,12 @@
+#headerTitle {
+    font-size: 3vw;
+    background: #B8E1FC;
+    background: radial-gradient(circle farthest-corner at center center, #B8E1FC 0%, #231421 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.nav-item{
+    font-size: 1.5vw;
+}

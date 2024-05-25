@@ -1,7 +1,9 @@
+import "./style.css"
+
 function simpleFooter(){
 return(
-<div>
-    <h2>&copy; Erik Gontijo 2024</h2>
+<div className= "fixed-bottom text-center">
+    <h2 className="fs-4">&copy; Erik Gontijo 2024</h2>
 </div>
 );
 }
