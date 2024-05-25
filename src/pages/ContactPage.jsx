@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Contact () {
-    const [firstName, setFirstName] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -14,8 +14,8 @@ function Contact () {
 
     if (inputType === 'email') {
         setEmail(inputValue);
-    } else if (inputType === 'firstName') {
-        setFirstName(inputValue);
+    } else if (inputType === 'name') {
+        setName(inputValue);
     } else if (inputType === "subject"){
         setSubject(inputValue);
     } else {
@@ -27,7 +27,7 @@ function Contact () {
 const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    setFirstName('');
+    setName('');
     setEmail("");
     setSubject("");
     setMessage("");
@@ -38,18 +38,18 @@ const handleFormSubmit = (event) => {
         <h1>Contact Me</h1>
         <form className= "form" onSubmit={handleFormSubmit}>
             <input
-                value={firstName}
-                name="firstName"
+                value={name}
+                name="name"
                 onChange={handleInputChange}
                 type="text"
-                placeholder="First name"
+                placeholder="Name"
             />
             <input
                 value={email}
                 name="email"
                 onChange={handleInputChange}
                 type="email"
-                placeholder="email"
+                placeholder="Email"
             />
             <input
                 value={subject}
