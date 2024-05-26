@@ -37,7 +37,7 @@ const handleFormSubmit = (event) => {
 
   return (
     <div className= "container text-center">
-        <h1>Contact Me</h1>
+        <h1 className="fst-normal  fw-bold">Contact Me</h1>
         <div className="d-flex justify-content-center align-items-center" id="aLinks">
       <div className="text-center m-4">
         <a href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">

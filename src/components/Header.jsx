@@ -6,7 +6,7 @@ function NavTabs() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="collapse navbar-collapse justify-content-between">
-    <h1 className="navbar-brand m-3 font-weight-bold" id="headerTitle">Erik Gontijo</h1>
+    <h1 className="navbar-brand m-3 fst-italic fw-bold" id="headerTitle">Erik Gontijo</h1>
     <ul className="navbar-nav">
       <li className="nav-item m-5" id="icons">
         <Link
