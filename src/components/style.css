@@ -1,3 +1,4 @@
+/* MAIN VARIABLES FOR PAGE */
 :root{
     --mainBackground:  #f0fbff;
     --secondBackground: #acdcee;
@@ -5,26 +6,44 @@
     --secondFont: #2e94b9;
     --darkColor: black;
     --lightColor: white;
+    --mainFontFamily: 'Georgia', sans-serif;
 }
 
-
+/* Header Style START */
 #headerTitle {
     font-size: 2vw;
-    background: var(--secondFont);
-    background: radial-gradient(circle farthest-corner at center center, var(--secondFont) 0%, var(--mainFont) 100%);
+    font-family: var(--mainFontFamily);
+    background: #475053;
+    background: linear-gradient(to top left, #475053 27%, #2E94B9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 500;
-}
+    opacity: 0;
+    animation: fadeIn 10s forwards infinite;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 .nav-item{
     font-size: 1.5vw;
 }
 
-#footerText{
-    color: var(--mainFont)
-}
-
 #icons:hover{
     transform: scale(1.5);
 }
+
+/* Header Style END */
+
+/* Footer Style START */
+
+#footerText{
+  color: var(--mainFont);
+  font-family: var(--mainFontFamily);
+}
+
+/* Footer Style END */
