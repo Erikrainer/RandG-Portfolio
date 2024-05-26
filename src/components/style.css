@@ -1,7 +1,17 @@
+:root{
+    --mainBackground:  #f0fbff;
+    --secondBackground: #acdcee;
+    --mainFont: #475053;
+    --secondFont: #2e94b9;
+    --darkColor: black;
+    --lightColor: white;
+}
+
+
 #headerTitle {
-    font-size: 3vw;
-    background: #B8E1FC;
-    background: radial-gradient(circle farthest-corner at center center, #B8E1FC 0%, #231421 100%);
+    font-size: 2vw;
+    background: var(--secondFont);
+    background: radial-gradient(circle farthest-corner at center center, var(--secondFont) 0%, var(--mainFont) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
@@ -9,4 +19,8 @@
 
 .nav-item{
     font-size: 1.5vw;
+}
+
+#footerText{
+    color: var(--mainFont)
 }

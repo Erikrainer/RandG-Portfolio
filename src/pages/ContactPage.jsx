@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FaWhatsapp, FaEnvelope} from 'react-icons/fa';
+import "./style.css"
 
 function Contact () {
     const [name, setName] = useState('');
@@ -36,37 +38,62 @@ const handleFormSubmit = (event) => {
   return (
     <div className= "container text-center">
         <h1>Contact Me</h1>
-        <form className= "form" onSubmit={handleFormSubmit}>
+        <div className="d-flex justify-content-center align-items-center" id="aLinks">
+      <div className="text-center m-4">
+        <a id="whatsapp" href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp size={50} style={{ color: '#475053' }} />
+          <div>WhatsApp</div>
+        </a>
+      </div>
+      <div className="text-center m-4">
+        <a id="email" href="mailto:rainer.erik70@gmail.com" target="_blank" rel="noopener noreferrer">
+          <FaEnvelope size={50} style={{ color: '#475053' }} />
+          <div>Email</div>
+        </a>
+      </div>
+    </div>
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <form className="form-group" onSubmit={handleFormSubmit}>
             <input
-                value={name}
-                name="name"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Name"
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Name"
+              className="form-control mb-3"
             />
             <input
-                value={email}
-                name="email"
-                onChange={handleInputChange}
-                type="email"
-                placeholder="Email"
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="Email"
+              className="form-control mb-3"
             />
             <input
-                value={subject}
-                name="subject"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Subject"
+              value={subject}
+              name="subject"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Subject"
+              className="form-control mb-3"
             />
             <input
-                value={message}
-                name="message"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Message"
+              value={message}
+              name="message"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Message"
+              className="form-control mb-3"
+              style={{ height: '120px' }}
             />
-            <button type="submit">Send Feedback</button>
-        </form>
+            <button type="submit" className="btn btn-outline-primary">Send Feedback</button>
+          </form>
+        </div>
+      </div>
+    </div>
         {errorMessage && (
             <div>
                 <p className="error-text">{errorMessage}</p>
