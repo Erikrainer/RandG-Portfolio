@@ -58,3 +58,13 @@
   font-family: var(--mainFontFamily);
 }
 /* HOME PAGE END HERE */
+
+/* ABOUT PAGE START HERE */
+
+#aboutContainer {
+  font-family: var(--mainFontFamily);
+}
+
+
+
+/* ABOUT PAGE END HERE */
