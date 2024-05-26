@@ -36,8 +36,8 @@ const handleFormSubmit = (event) => {
 }
 
   return (
-    <div className= "container text-center">
-        <h1 className="fst-normal  fw-bold">Contact Me <FaHandshake size={40} style={{ color: '#475053' }}/></h1>
+    <div className= "container text-center " id="contactContainer">
+        <h1 className="fst-normal  fw-bold mt-5 text-uppercase">Contact Me <FaHandshake size={40} style={{ color: '#475053' }}/></h1>
         <div className="d-flex justify-content-center align-items-center" id="aLinks">
       <div className="text-center m-4">
         <a href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">

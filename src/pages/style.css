@@ -15,6 +15,10 @@
     color: var(--mainFont)
 }
 
+#contactContainer{
+  font-family: var(--mainFontFamily);
+}
+
 #contactIcons:hover{
   transform: scale(1.5);
 }
