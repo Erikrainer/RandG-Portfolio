@@ -11,3 +11,7 @@
     text-decoration: none;
     color: var(--mainFont)
 }
+
+#contactIcons:hover{
+    transform: scale(1.5);
+}

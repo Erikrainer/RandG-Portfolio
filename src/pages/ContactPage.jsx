@@ -40,14 +40,14 @@ const handleFormSubmit = (event) => {
         <h1>Contact Me</h1>
         <div className="d-flex justify-content-center align-items-center" id="aLinks">
       <div className="text-center m-4">
-        <a id="whatsapp" href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">
-          <FaWhatsapp size={50} style={{ color: '#475053' }} />
+        <a href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp  id="contactIcons" size={50} style={{ color: '#475053' }} />
           <div>WhatsApp</div>
         </a>
       </div>
       <div className="text-center m-4">
-        <a id="email" href="mailto:rainer.erik70@gmail.com" target="_blank" rel="noopener noreferrer">
-          <FaEnvelope size={50} style={{ color: '#475053' }} />
+        <a href="mailto:rainer.erik70@gmail.com" target="_blank" rel="noopener noreferrer">
+          <FaEnvelope id="contactIcons" size={50} style={{ color: '#475053' }} />
           <div>Email</div>
         </a>
       </div>
