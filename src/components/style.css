@@ -1,12 +1,15 @@
 /* MAIN VARIABLES FOR PAGE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
-    --mainBackground:  #f0fbff;
-    --secondBackground: #acdcee;
-    --mainFont: #475053;
-    --secondFont: #2e94b9;
-    --darkColor: black;
-    --lightColor: white;
-    --mainFontFamily: 'Georgia', sans-serif;
+  --mainBackground:  #f0fbff;
+  --secondBackground: #acdcee;
+  --thirdBackground: #0D3B66;
+  --thirdFont: #860021;
+  --mainFont: #475053;
+  --secondFont: #2e94b9;
+  --darkColor: black;
+  --lightColor: white;
+  --mainFontFamily: 'Poppins', sans-serif;
 }
 
 /* Header Style START */
@@ -17,16 +20,6 @@
     background: linear-gradient(to top left, #475053 27%, #2E94B9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    animation: fadeIn 10s forwards infinite;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
 .nav-item{
