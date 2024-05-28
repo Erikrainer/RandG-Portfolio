@@ -89,6 +89,7 @@ function ProjectPage() {
       case 2:
         return (
           <>
+          {/* Render second set of cards */}
             <BigProjectCard
               title="Gifs and Giggles"
               imageName="gifs-n-giggles.gif"
