@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaGithub, FaHome, FaInfoCircle, FaBriefcase,  FaEnvelope} from 'react-icons/fa';
+import { FaGithub, FaHome, FaInfoCircle, FaBriefcase,  FaEnvelope, FaFile} from 'react-icons/fa';
 import "./style.css"
 function NavTabs() {
   const currentPage = useLocation().pathname;
@@ -34,6 +34,13 @@ function NavTabs() {
           to="/Contact"
         >
           <FaEnvelope size={35} color={currentPage === '/Contact' ? "#2e94b9" : "#475053"} />
+        </Link>
+        </li>
+        <li className="nav-item m-5" id="icons">
+        <Link
+          to="/Resume"
+        >
+          <FaFile size={35} color={currentPage === '/Resume' ? "#2e94b9" : "#475053"} />
         </Link>
       </li>
     </ul>

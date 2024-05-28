@@ -1,0 +1,45 @@
+/* MAIN VARIABLES FOR PAGE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --mainBackground:  #f0fbff;
+  --secondBackground: #acdcee;
+  --thirdBackground: #0D3B66;
+  --thirdFont: #860021;
+  --mainFont: #475053;
+  --secondFont: #2e94b9;
+  --darkColor: black;
+  --lightColor: white;
+  --mainFontFamily: 'Poppins', sans-serif;
+  --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
+}
+
+#resumeContainer {
+  font-family: var(--mainFontFamily);
+  margin-top: 2rem;
+}
+
+#resumeTitle {
+  font-size: 2vw;
+  background: #09C826;
+  background: linear-gradient(to right, #09C826 0%, #A53791 77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(1.5);
+}
+
+.list-group {
+  margin-top: 1rem;
+}
+
+.list-group-item {
+  color: var(--lightColor);
+  background: linear-gradient(to right, var(--thirdFont), var(--thirdBackground)) !important;
+  border: none;
+  border-radius: 5px;
+}
+
+.list-group-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
