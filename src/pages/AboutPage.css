@@ -105,3 +105,61 @@
     background: linear-gradient(to right, #373b44, var(--thirdBackground)) !important;
   }
   /* ABOUT PAGE END HERE */
+
+  /* ABOUT PAGE MEDIA QUERIES START*/
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 2.5vw;
+  }
+
+  #aboutText {
+    font-size: 1.75vw;
+  }
+
+  #hobbyCard {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 3vw;
+  }
+
+  #aboutText {
+    font-size: 2vw;
+  }
+
+  #hobbyCard {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 4vw;
+  }
+
+  #aboutText {
+    font-size: 2.5vw;
+  }
+
+  #hobbyCard {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 5vw;
+  }
+
+  #aboutText {
+    font-size: 3vw;
+  }
+
+  #hobbyCard {
+    width: 10rem;
+  }
+}
+  /* ABOUT PAGE MEDIA QUERIES END*/
