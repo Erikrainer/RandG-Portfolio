@@ -22,7 +22,7 @@ Now that i’ve completed multiple projects, my task is to create a portfolio, u
 
 ## Installations  💻
 
-Deployed link: https://main--rangportfolio.netlify.app/
+Deployed link: https://rangportfolio.netlify.app/
 
 To install dependencies, run these commands:
 
