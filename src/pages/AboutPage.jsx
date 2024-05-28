@@ -16,9 +16,9 @@ function Home() {
           </div>
         </div>
         <div className="col-md-6">
-          <h2 id="skillTitle">C++</h2>
+          <h2 id="skillTitle">MongoDB</h2>
           <div className="progress">
-            <div className="progress-bar" role="progressbar" style={{ width: '50%' }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            <div className="progress-bar" role="progressbar" style={{ width: '80%' }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
       </div>

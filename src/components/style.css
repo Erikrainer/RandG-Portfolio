@@ -13,13 +13,15 @@
   --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
 /* Header Style START */
-#headerTitle {
+#headerTitle{
   font-size: 2vw;
   font-family: var(--mainFontFamily);
-  background: var(--mainFont);
-  background: linear-gradient(to top left, var(--mainFont) 27%, var(--secondFont) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 2vw;
+    background: #09C826;
+    background: linear-gradient(to right, #09C826 0%, #A53791 77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.5);
 }
 
 .nav-item {

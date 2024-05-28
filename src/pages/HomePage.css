@@ -32,11 +32,14 @@
   }
   
   #presentationName{
-    background: #475053;
-    background: linear-gradient(to top left, var(--mainFont) 27%, var(--secondFont) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
+    font-size: 3vw;
+    font-family: var(--mainFontFamily);
+      background: #09C826;
+      background: linear-gradient(to right, #09C826 0%, #A53791 77%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: brightness(1.5);
+  }
   
   #presentationContainer{
     font-size: 3vw;
