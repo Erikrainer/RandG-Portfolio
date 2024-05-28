@@ -20,10 +20,11 @@
 
   h2{
     font-size: 2vw;
-    background: #121FCF;
-    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: #09C826;
+    background: linear-gradient(to right, #09C826 0%, #A53791 77%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
   }
   
   #aboutText{
