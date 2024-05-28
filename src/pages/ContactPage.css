@@ -10,7 +10,7 @@
   --darkColor: black;
   --lightColor: white;
   --mainFontFamily: 'Poppins', sans-serif;
-  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+  --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
 /* CONTACT ME PAGE START HERE */
 #aLinks a{
@@ -26,3 +26,30 @@
   transform: scale(1.5);
 }
 /* CONTACT ME PAGE END HERE */
+
+/* CONTACT ME PAGE MEDIA QUERIES START*/
+@media (max-width: 1200px) {
+  #contactContainer {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 992px) {
+  #contactContainer {
+    font-size: 1.75vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #contactContainer {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  #contactContainer {
+    font-size: 2.5vw;
+  }
+}
+
+/* CONTACT ME PAGE MEDIA QUERIES END*/

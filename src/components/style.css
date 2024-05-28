@@ -1,8 +1,7 @@
 /* MAIN VARIABLES FOR PAGE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-:root {
-  --mainBackground: #f0fbff;
+:root{
+  --mainBackground:  #f0fbff;
   --secondBackground: #acdcee;
   --thirdBackground: #0D3B66;
   --thirdFont: #860021;
@@ -11,14 +10,14 @@
   --darkColor: black;
   --lightColor: white;
   --mainFontFamily: 'Poppins', sans-serif;
+  --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
-
 /* Header Style START */
 #headerTitle {
   font-size: 2vw;
   font-family: var(--mainFontFamily);
-  background: #475053;
-  background: linear-gradient(to top left, #475053 27%, #2E94B9 100%);
+  background: var(--mainFont);
+  background: linear-gradient(to top left, var(--mainFont) 27%, var(--secondFont) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

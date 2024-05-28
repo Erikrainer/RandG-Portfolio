@@ -10,7 +10,7 @@
   --darkColor: black;
   --lightColor: white;
   --mainFontFamily: 'Poppins', sans-serif;
-  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+  --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
 
 /* PROJECT PAGE START HERE */
@@ -54,7 +54,7 @@
   }
   
   .big-card h2, .big-card p {
-    color: #fff;
+    color: var(--lightColor);
   }
   
   .big-card:hover,
@@ -64,11 +64,11 @@
   }
   
   #pageButton {
-    border: 5px solid;
+    border: 2px solid var(--lightColor);
     border-image-slice: 1;
     background: var(--gradient) !important;
     -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    -webkit-text-fill-color: var(--lightColor) !important;
     text-decoration: none;
     transition: all .4s ease;
   }
@@ -77,8 +77,8 @@
   #pageButton:focus {
     background: var(--gradient) !important;
     -webkit-background-clip: none !important;
-    -webkit-text-fill-color: #fff !important;
-    border: 5px solid #fff !important; 
+    -webkit-text-fill-color: var(--lightColor) !important;
+    border: 5px solid var(--darkColor) !important; 
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
   }
@@ -119,3 +119,71 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   /* PROJECT PAGE END HERE */
+
+  /* PROJECT PAGE MEDIA QUERIES START*/
+@media (max-width: 1200px) {
+  .main-container {
+    padding: 40px;
+  }
+
+  .big-card {
+    width: 70%;
+    height: 30rem;
+  }
+
+  .small-card {
+    width: 30%;
+    height: 18rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    padding: 30px;
+  }
+
+  .big-card {
+    width: 80%;
+    height: 28rem;
+  }
+
+  .small-card {
+    width: 40%;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
+
+  .big-card {
+    width: 90%;
+    height: 26rem;
+  }
+
+  .small-card {
+    width: 60%;
+    height: 14rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .big-card {
+    width: 100%;
+    height: 24rem;
+  }
+
+  .small-card {
+    width: 80%;
+    height: 12rem;
+  }
+}
+
+  /* PROJECT PAGE MEDIA QUERIES END*/

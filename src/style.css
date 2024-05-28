@@ -10,6 +10,7 @@
   --darkColor: black;
   --lightColor: white;
   --mainFontFamily: 'Poppins', sans-serif;
+  --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
 
 /* Body Style */
