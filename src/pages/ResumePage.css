@@ -43,3 +43,26 @@
   transition: transform 0.3s ease;
   cursor: grab;
 }
+
+
+@media screen and (max-width: 768px) {
+  #resumeTitle {
+    font-size: 5vw;
+  }
+}
+
+  /* ABOUT PAGE MEDIA QUERIES START*/
+@media screen and (max-width: 576px) {
+  #resumeContainer {
+    margin-top: 1rem;
+  }
+  
+  .list-group {
+    margin-top: 0.5rem;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+  }
+}
+  /* ABOUT PAGE MEDIA QUERIES END*/
