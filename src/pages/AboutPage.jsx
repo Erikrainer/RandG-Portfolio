@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./AboutPage.css";
 
 function Home() {
   return (
@@ -57,28 +57,28 @@ function Home() {
         <div className="card hobby-card m-3 l-bg-blue-dark" id="hobbyCard">
           <img src="https://cdn-icons-png.flaticon.com/512/1391/1391364.png" className="card-img-top" alt="Anime" />
           <div className="card-body">
-            <h5 className="card-title">Anime</h5>
+            <h2 className="card-title">Anime</h2>
             <p className="card-text">I love watching anime, especially One Piece!</p> 
           </div>
         </div>
         <div className="card hobby-card m-3 l-bg-blue-dark" id="hobbyCard">
           <img src="https://img.icons8.com/plasticine/100/000000/controller.png" className="card-img-top" alt="Games" />
           <div className="card-body">
-            <h5 className="card-title">Games</h5>
+            <h2 className="card-title">Games</h2>
             <p className="card-text">I'm an avid gamer and enjoy playing a variety of video games.</p>
           </div>
         </div>
         <div className="card hobby-card m-3 l-bg-blue-dark" id="hobbyCard">
           <img src="https://img.icons8.com/plasticine/100/000000/3d-printer.png" className="card-img-top" alt="3D Printing" />
           <div className="card-body">
-            <h5 className="card-title">3D Printing</h5>
+            <h2 className="card-title">3D Printing</h2>
             <p className="card-text">I enjoy creating and printing 3D models.</p>
           </div>
         </div>
         <div className="card hobby-card m-3 l-bg-blue-dark" id="hobbyCard">
           <img src="https://img.icons8.com/plasticine/100/000000/computer.png" className="card-img-top" alt="Coding" />
           <div className="card-body">
-            <h5 className="card-title">Coding</h5>
+            <h2 className="card-title">Coding</h2>
             <p className="card-text">Coding is my passion, and I love building new projects and learning new languages.</p>
           </div>
         </div>
@@ -89,7 +89,7 @@ function Home() {
       <div className="col-xl-6 col-lg-6">
         <div className="card hobby-card m-3 l-bg-blue-dark">
           <div className="card-body">
-            <h5 className="card-title" id="titleAchievement">500+</h5>
+            <h2 className="card-title">500+</h2>
             <p className="card-text" id="textAchievement">Hours of Training</p>
           </div>
         </div>
@@ -97,7 +97,7 @@ function Home() {
       <div className="col-xl-6 col-lg-6">
         <div className="card hobby-card m-3 l-bg-blue-dark">
           <div className="card-body">
-            <h5 className="card-title" id="titleAchievement">20+</h5>
+            <h2 className="card-title">20+</h2>
             <p className="card-text" id="textAchievement">Projects Completed</p>
           </div>
         </div>
@@ -105,7 +105,7 @@ function Home() {
       <div className="col-xl-6 col-lg-6">
         <div className="card hobby-card m-3 l-bg-blue-dark">
           <div className="card-body">
-            <h5 className="card-title" id="titleAchievement">5000+</h5>
+            <h2 className="card-title">5000+</h2>
             <p className="card-text" id="textAchievement">Lines of Code Written</p>
           </div>
         </div>

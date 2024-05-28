@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaWhatsapp, FaEnvelope, FaHandshake} from 'react-icons/fa';
-import "./style.css"
+import "./ContactPage.css"
 
 function Contact () {
     const [name, setName] = useState('');

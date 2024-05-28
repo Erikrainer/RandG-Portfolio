@@ -1,0 +1,121 @@
+/* MAIN VARIABLES FOR PAGE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --mainBackground:  #f0fbff;
+  --secondBackground: #acdcee;
+  --thirdBackground: #0D3B66;
+  --thirdFont: #860021;
+  --mainFont: #475053;
+  --secondFont: #2e94b9;
+  --darkColor: black;
+  --lightColor: white;
+  --mainFontFamily: 'Poppins', sans-serif;
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+
+/* PROJECT PAGE START HERE */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .big-card {
+    width: 60%;
+    height: 35rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    border: 4px solid transparent;
+    transition: transform 0.3s ease;
+  }
+  
+  .big-card img{
+    position: absolute;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+  
+  .big-card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .big-card h2, .big-card p {
+    color: #fff;
+  }
+  
+  .big-card:hover,
+  .small-card:hover {
+    transform: scale(1.05);
+    border-color: var(--secondFont);
+  }
+  
+  #pageButton {
+    border: 5px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  
+  #pageButton:hover, 
+  #pageButton:focus {
+    background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
+  /* Small Card Styles */
+  .small-card {
+    width: 25%;
+    height: 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    margin: 1rem 2rem 2rem 2rem;
+    border: 4px solid transparent;
+    transition: transform 0.3s ease;
+  }
+  
+  .small-card img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    border-color: var(--secondFont);
+  }
+  
+  .small-card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* PROJECT PAGE END HERE */

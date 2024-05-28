@@ -1,0 +1,106 @@
+/* MAIN VARIABLES FOR PAGE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --mainBackground:  #f0fbff;
+  --secondBackground: #acdcee;
+  --thirdBackground: #0D3B66;
+  --thirdFont: #860021;
+  --mainFont: #475053;
+  --secondFont: #2e94b9;
+  --darkColor: black;
+  --lightColor: white;
+  --mainFontFamily: 'Poppins', sans-serif;
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+
+/* ABOUT PAGE START HERE */
+#aboutContainer {
+    font-family: var(--mainFontFamily);
+  }
+
+  h2{
+    font-size: 2vw;
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #aboutText{
+    font-size: 1.5vw;
+    color: var(--mainFont)
+  }
+  
+  #hobbyCard {
+    width: 18rem;
+  }
+  .container {
+    margin-top: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col-xl-6,
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+      0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+      0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+      0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  }
+  
+  .card .card-body {
+    padding: 1.25rem;
+  }
+
+  .progress-bar{
+    background: #860021;
+    background: linear-gradient(to top left, var(--thirdFont) 17%, var(--thirdBackground) 64%);
+  }
+  .card-text {
+    color: var(--lightColor);
+  }
+  
+  .col-md-6:hover .progress-bar,
+  .col-md-6:hover #skillTitle {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    cursor: grab;
+  }
+  
+  .hobby-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+      0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+      0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+      0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  }
+  
+  .hobby-card:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    cursor: grab;
+  }
+  
+  .l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, var(--thirdBackground)) !important;
+  }
+  /* ABOUT PAGE END HERE */
