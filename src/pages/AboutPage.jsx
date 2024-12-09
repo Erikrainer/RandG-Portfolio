@@ -5,10 +5,16 @@ function Home() {
   return (
     <div className="container text-center" id="aboutContainer">
       <p className="mt-5 fw-bold" id="aboutText">
-        I`m a passionate web developer currently completing my bootcamp. I'm enthusiastic about learning new technologies and building exciting projects. Graduating in June 2024!
+      I'm a passionate web developer who recently graduated from a bootcamp. I'm currently studying C++ for Unreal Engine, exploring Unreal Engine features, and mastering Blueprint scripting. I'm working on a game inspired by Final Fantasy Tactics, aiming to create a more realistic world with intricate mechanics and engaging gameplay.
       </p>
       <section id="skillSection" className="container text-left">
       <div className="row">
+        <div className="col-md-6">
+          <h2 id="skillTitle">Unreal Engine Developer</h2>
+          <div className="progress">
+            <div className="progress-bar" role="progressbar" style={{ width: '30%' }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
         <div className="col-md-6">
           <h2 id="skillTitle">HTML & CSS</h2>
           <div className="progress">
@@ -65,7 +71,7 @@ function Home() {
           <img src="https://img.icons8.com/plasticine/100/000000/controller.png" className="card-img-top" alt="Games" />
           <div className="card-body">
             <h2 className="card-title">Games</h2>
-            <p className="card-text">I'm an avid gamer and enjoy playing a variety of video games.</p>
+            <p className="card-text">I'm an avid gamer and enjoy playing and creating a variety of video games.</p>
           </div>
         </div>
         <div className="card hobby-card m-3 l-bg-blue-dark" id="hobbyCard">

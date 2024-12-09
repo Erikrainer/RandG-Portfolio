@@ -7,8 +7,9 @@ import Error from './pages/ErrorPage';
 import Home from './pages/HomePage';
 import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
-import Project from './pages/ProjectPage';
+import JavaScriptProject from './pages/ProjectPage';
 import Resume from "./pages/ResumePage"
+import UnrealProject from "./pages/UnrealProjectPage"
 
 
 const router = createBrowserRouter([
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/Project',
-        element: <Project />,
+        path: '/JavaScriptProject',
+        element: <JavaScriptProject />,
+      },
+      {
+        path:"/UnrealProject",
+        element: <UnrealProject />,
       },
       {
         path: '/Contact',

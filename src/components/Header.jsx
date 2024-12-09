@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaGithub, FaHome, FaInfoCircle, FaBriefcase,  FaEnvelope, FaFile} from 'react-icons/fa';
+import { FaGithub,FaGamepad , FaHome, FaInfoCircle, FaBriefcase,  FaEnvelope, FaFile} from 'react-icons/fa';
 import "./style.css"
 function NavTabs() {
   const currentPage = useLocation().pathname;
@@ -24,9 +24,16 @@ function NavTabs() {
       </li>
       <li className="nav-item m-5" id="icons">
         <Link
-          to="/Project"
+          to="/JavaScriptProject"
         >
-          <FaBriefcase size={35} color={currentPage === '/Project' ? "#2e94b9" : "#475053"} />
+          <FaBriefcase size={35} color={currentPage === '/JavaScriptProject' ? "#2e94b9" : "#475053"} />
+        </Link>
+      </li>
+      <li className="nav-item m-5" id="icons">
+        <Link
+          to="/UnrealProject"
+        >
+          <FaGamepad size={35} color={currentPage === '/UnrealProject' ? "#2e94b9" : "#475053"} />
         </Link>
       </li>
       <li className="nav-item m-5" id="icons">

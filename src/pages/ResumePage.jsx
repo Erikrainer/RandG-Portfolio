@@ -21,6 +21,9 @@ const ResumePage = () => {
             <li className="list-group-item">
                 C++
             </li>
+            <li className="list-group-item">
+                Unreal Engine
+            </li>
         </ul>
         </li>
             <li className="mt-5 list-group-item"><span id="resumeTitle">Tecnologies</span>
