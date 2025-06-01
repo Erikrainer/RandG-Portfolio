@@ -1,6 +1,6 @@
 /* MAIN VARIABLES FOR PAGE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-:root{
+:root {
   --mainBackground:  #f0fbff;
   --secondBackground: #acdcee;
   --thirdBackground: #0D3B66;
@@ -12,22 +12,145 @@
   --mainFontFamily: 'Poppins', sans-serif;
   --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
-/* CONTACT ME PAGE START HERE */
-#aLinks a{
-    text-decoration: none;
-    color: var(--mainFont)
-}
 
-#contactContainer{
+/* CONTACT ME PAGE START HERE */
+#contactContainer {
   font-family: var(--mainFontFamily);
 }
 
-#contactIcons:hover{
+#aLinks a {
+  text-decoration: none;
+  color: var(--mainFont);
+}
+
+#contactIcons:hover {
   transform: scale(1.5);
 }
-/* CONTACT ME PAGE END HERE */
 
-/* CONTACT ME PAGE MEDIA QUERIES START*/
+/* NEW LAYOUT FOR CONTACT PAGE */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 40px 20px;
+  background-color: var(--mainBackground);
+  color: var(--mainFont);
+  font-family: var(--mainFontFamily);
+  justify-content: center;
+}
+
+.contact-right-panel h2 {
+  margin-bottom: 25px;
+  color: var(--thirdFont);
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact-right-panel h1 {
+  color: var(--thirdFont);
+  font-weight: 700;
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.info-icon {
+  color: var(--thirdFont);
+  margin-right: 15px;
+}
+
+.info-item strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Right panel - Form styles */
+.contact-right-panel {
+  flex: 2 1 500px;
+  max-width: 600px;
+  background: var(--lightColor);
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 4px 10px rgba(104, 91, 71, 0.15);
+}
+
+.handshake-icon {
+  color: var(--mainFont);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+  font-family: var(--mainFontFamily);
+  border: 2px solid var(--secondBackground);
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--mainFont);
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--thirdFont);
+  outline: none;
+}
+
+.submit-button {
+  background: var(--thirdFont);
+  color: var(--lightColor);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: var(--secondFont);
+  color: var(--lightColor);
+}
+
+/* Alert messages */
+.alert {
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.success-alert {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive font size adjustments for #contactContainer */
 @media (max-width: 1200px) {
   #contactContainer {
     font-size: 1.5vw;
@@ -50,6 +173,16 @@
   #contactContainer {
     font-size: 2.5vw;
   }
-}
 
-/* CONTACT ME PAGE MEDIA QUERIES END*/
+  /* Stack panels vertically on small screens */
+  .contact-container {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
+  .contact-left-panel,
+  .contact-right-panel {
+    max-width: 100%;
+  }
+}
+/* CONTACT ME PAGE END HERE */

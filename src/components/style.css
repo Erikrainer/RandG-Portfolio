@@ -1,7 +1,7 @@
-/* MAIN VARIABLES FOR PAGE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-:root{
-  --mainBackground:  #f0fbff;
+
+:root {
+  --mainBackground: #f0fbff;
   --secondBackground: #acdcee;
   --thirdBackground: #0D3B66;
   --thirdFont: #860021;
@@ -12,121 +12,149 @@
   --mainFontFamily: 'Poppins', sans-serif;
   --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
-/* Header Style START */
-#headerTitle{
+
+/* GENERAL BODY SETUP */
+body {
+  background-color: var(--mainBackground);
+  margin: 0;
+  font-family: var(--mainFontFamily);
+}
+
+/* HEADER STYLE */
+#navBar {
+  background-color: #FFF5E4; /* Cozy creamy bg */
+  border-bottom: 2px solid #D99A6C; /* Soft orange border */
+  padding: 10px 20px;
+}
+
+#headerTitle {
   font-size: 2vw;
   font-family: var(--mainFontFamily);
-    font-size: 2vw;
-    background: #09C826;
-    background: linear-gradient(to right, #09C826 0%, #A53791 77%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: brightness(1.5);
+  background: linear-gradient(to right, #D99A6C 0%, #8B5E3C 77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(1.2);
+  cursor: pointer;
+  margin: 0;
 }
 
 .nav-item {
   font-size: 1.5vw;
+  color: #8B5E3C; /* warm brown */
+  transition: color 0.3s ease;
+}
+
+#icons {
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #icons:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
+  color: #D99A6C !important; /* soft orange on hover */
+  cursor: pointer;
 }
 
-/* Header Style END */
+/* FOOTER STYLE */
+.footer {
+  background-color: #FFF5E4;
+  padding: 20px 0;
+  text-align: center;
+}
 
-/* Footer Style START */
 #footerText {
-  color: var(--mainFont);
+  color: #8B5E3C;
   font-family: var(--mainFontFamily);
+  margin-top: 10px;
 }
 
-/* Footer Style END */
+#icons svg {
+  color: #8B5E3C;
+  transition: color 0.3s ease;
+}
 
-/*PAGE MEDIA QUERIES START*/
+#icons:hover svg {
+  color: #D99A6C;
+  cursor: pointer;
+}
 
-  @media (max-width: 576px) {
-    #headerTitle {
-      font-size: 5vw;
-      margin: 0;
-    }
-  
-    .nav-item {
-      font-size: 3.5vw;
-      margin: 0.5rem 0;
-    }
-  
-    .nav-link {
-      font-size: 1.25rem;
-    }
-  
-    #icons {
-      margin: 1rem 0;
-    }
-  
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .navbar-collapse {
-      text-align: center;
-    }
-  
-    .navbar-toggler {
-      margin: 0.5rem;
-    }
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  #headerTitle {
+    font-size: 5vw;
+    margin: 0;
   }
 
-  @media (max-width: 768px) {
-    #headerTitle {
-      font-size: 4vw;
-    }
-  
-    .nav-item {
-      font-size: 3vw;
-    }
-  
-    #icons {
-      margin: 2rem 0;
-    }
-  
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-item {
-      margin: 1rem 0;
-    }
-  
-    .navbar-toggler {
-      margin: 1rem;
-    }
-  
-    .navbar-collapse {
-      text-align: center;
-    }
+  .nav-item {
+    font-size: 3.5vw;
+    margin: 0.5rem 0;
   }
 
-  @media (max-width: 1200px) {
-    #headerTitle {
-      font-size: 2.5vw;
-    }
-  
-    .nav-item {
-      font-size: 2vw;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    #headerTitle {
-      font-size: 3vw;
-    }
-  
-    .nav-item {
-      font-size: 2.5vw;
-    }
+  #icons {
+    margin: 1rem 0;
   }
 
-/*PAGE MEDIA QUERIES END*/
-  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #headerTitle {
+    font-size: 4vw;
+  }
+
+  .nav-item {
+    font-size: 3vw;
+  }
+
+  #icons {
+    margin: 2rem 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .navbar-toggler {
+    margin: 1rem;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  #headerTitle {
+    font-size: 2.5vw;
+  }
+
+  .nav-item {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 992px) {
+  #headerTitle {
+    font-size: 3vw;
+  }
+
+  .nav-item {
+    font-size: 2.5vw;
+  }
+}

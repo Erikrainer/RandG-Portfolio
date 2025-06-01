@@ -1,6 +1,7 @@
-/* MAIN VARIABLES FOR PAGE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-:root{
+
+/* CSS VARIABLES */
+:root {
   --mainBackground:  #f0fbff;
   --secondBackground: #acdcee;
   --thirdBackground: #0D3B66;
@@ -13,98 +14,320 @@
   --gradient: linear-gradient(to left top, #0D3B66 10%, #860021 90%) !important;
 }
 
-
-/* HOME PAGE START HERE */
-.rounded-space {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    
-  .rounded-space img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #presentationName{
-    font-size: 3vw;
-    font-family: var(--mainFontFamily);
-      background: #09C826;
-      background: linear-gradient(to right, #09C826 0%, #A53791 77%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: brightness(1.5);
-  }
-  
-  #presentationContainer{
-    font-size: 3vw;
-    font-family: var(--mainFontFamily);
-  }
-  
-  #presentationText{
-    font-size: 1vw;
-    font-family: var(--mainFontFamily);
-  }
-  /* HOME PAGE END HERE */
-
-  /* HOME PAGE MEDIA QUERIES START*/
-@media (max-width: 1200px) {
-  #presentationContainer {
-    font-size: 3.5vw;
-  }
-  #presentationName{
-    font-size: 5vw;
-  }
-
-  #presentationText {
-    font-size: 1.25vw;
-  }
+/* GLOBAL RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (max-width: 992px) {
-  #presentationContainer {
-    font-size: 4vw;
-  }
-
-  #presentationName{
-    font-size: 5vw;
-  }
-
-  #presentationText {
-    font-size: 1.5vw;
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: var(--mainFontFamily);
 }
 
+/* ================== Hero Section ================== */
+.hero-section {
+  position: relative;
+  color: var(--mainFont);
+  padding: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 400px;
+  width: 100%;             /* Changed from 100vw to 100% */
+  background-image: url('/path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-main-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: var(--secondFont);
+  letter-spacing: 0.05em;
+}
+
+.hero-btn {
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: #fffaf5;
+  color: #b56b45;
+  padding: 16px 38px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(255, 250, 245, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: #d38b5d;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================== Main Container ================== */
+#homeContainer {
+  background-color: var(--mainBackground);
+  width: 100%;
+}
+
+/* ================== Presentation Container ================== */
+#presentationContainer.presentation-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* full white background */
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-image {
+  padding-left: 25rem;
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  max-height: 100%;
+}
+
+.presentation-text {
+  flex: 1 1 50%;
+  padding: 1rem;
+  color: var(--mainFont);
+  font-family: var(--mainFontFamily);
+}
+/* ================== Why Container ================== */
+.why-container {
+  background-color: var(--thirdBackground);
+  color: var(--lightColor);
+  padding: 4rem 2rem;
+  max-width: 100%;
+}
+
+.why-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fceee3;
+  text-align: center;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+.reason-box {
+  background-color: #fceee3;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(211, 139, 93, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  color: #8b5e3c;
+  font-weight: 600;
+}
+
+.reason-box:hover {
+  transform: translateY(-8px);
+}
+
+.reason-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.reason-text {
+  font-size: 1.1rem;
+}
+
+/* ================== Testimonial Section ================== */
+.testimonial-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 3rem auto;
+  gap: 2rem;
+  color: var(--darkColor);
+}
+
+/* Left side */
+.testimonial-left {
+  flex: 0 0 40%;
+  min-width: 280px;
+  text-align: left;
+}
+
+.testimonial-title {
+  font-family: var(--mainFontFamily);
+  font-size: 2rem;
+  color: var(--thirdFont);
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-subtext {
+  font-size: 1.1rem;
+  color: var(--mainFont);
+  line-height: 1.4;
+}
+
+/* Carousel container */
+.testimonial-carousel {
+  flex: 0 0 55%;
+  background-color: var(--lightColor);
+  border-left: 5px solid var(--thirdBackground);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(211, 139, 93, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Quote text */
+.testimonial-content {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 1rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--darkColor);
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--thirdFont);
+  margin: 0;
+}
+
+/* Full height arrow buttons */
+.arrow-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.arrow-button:hover,
+.arrow-button:focus {
+  color: var(--mainFont);
+  outline: none;
+}
+
+.left-arrow {
+  left: 0;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--secondFont);
+}
+
+.right-arrow {
+  right: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--secondFont);
+}
+
+/* ================== Responsive ================== */
 @media (max-width: 768px) {
-  #presentationContainer {
-    font-size: 5vw;
+  .testimonial-section {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  #presentationName{
-    font-size: 5vw;
+  .testimonial-left {
+    max-width: 100%;
+    margin-bottom: 2rem;
   }
 
-  #presentationText {
-    font-size: 2vw;
+  .testimonial-carousel {
+    width: 100%;
+    justify-content: center;
+    padding-left: 60px;  /* avoid arrow overlap */
+    padding-right: 60px;
+  }
+
+  .arrow-button {
+    width: 44px;
+    font-size: 2rem;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 
-@media (max-width: 576px) {
-  #presentationContainer {
-    font-size: 6vw;
-  }
-  #presentationName{
-    font-size: 5vw;
-  }
-
-
-  #presentationText {
-    font-size: 2.5vw;
+@media (max-width: 480px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
   }
 }
-  /* HOME PAGE MEDIA QUERIES END*/

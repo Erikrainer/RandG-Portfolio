@@ -13,9 +13,9 @@ function simpleFooter() {
       <a className="m-4" id="icons" href="https://www.instagram.com/erikgontijo/" target="_blank" rel="noopener noreferrer">
       <FaInstagram size={25} style={{ color: '#2e94b9' }} />
       </a>
-      <h2 className="fs-4" id="footerText">&copy; Erik Gontijo 2024</h2>
+      <h2 className="fs-4" id="footerText">&copy; 2025 All Rights Reserved | Borges&Gontijo </h2>
     </div>
-  );
+);
 }
 
 export default simpleFooter;

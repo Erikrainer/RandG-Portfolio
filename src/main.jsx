@@ -8,7 +8,6 @@ import Home from './pages/HomePage';
 import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
 import JavaScriptProject from './pages/ProjectPage';
-import Resume from "./pages/ResumePage"
 import UnrealProject from "./pages/UnrealProjectPage"
 
 
@@ -38,10 +37,7 @@ const router = createBrowserRouter([
         path: '/Contact',
         element: <Contact />,
       },
-      {
-        path: '/Resume',
-        element: <Resume />,
-      },
+
     ],
   },
 ]);

@@ -1,38 +1,45 @@
 import React, { useState } from 'react';
-import { FaWhatsapp, FaEnvelope, FaHandshake } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaAt } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import './ContactPage.css';
 
 function Contact() {
-  const [name, setName] = useState('');
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
+  const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
 
-    if (name === 'email') {
-      setEmail(value);
-    } else if (name === 'name') {
-      setName(value);
-    } else if (name === 'subject') {
-      setSubject(value);
-    } else {
-      setMessage(value);
+    switch (name) {
+      case 'fullName':
+        setFullName(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'mobile':
+        setMobile(value);
+        break;
+      case 'message':
+        setMessage(value);
+        break;
+      default:
+        break;
     }
   };
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-    if (name && email && subject && message) {
+    if (fullName && email && mobile && message) {
       const templateParams = {
-        from_name: name,
+        from_name: fullName,
         from_email: email,
-        subject,
+        mobile,
         message,
       };
 
@@ -46,93 +53,100 @@ function Contact() {
           console.log('SUCCESS!', response.status, response.text);
           setIsSubmitted(true);
           setErrorMessage('');
+          setFullName('');
+          setEmail('');
+          setMobile('');
+          setMessage('');
         },
         (err) => {
           console.log('FAILED...', err);
           setErrorMessage('Failed to send email. Please try again later.');
         }
       );
-
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
     } else {
       setErrorMessage('Please fill out all fields');
     }
   };
 
   return (
-    <div className="container text-center" id="contactContainer">
-      <h1 className="fst-normal fw-bold mt-5 text-uppercase">
-        Contact Me <FaHandshake size={40} style={{ color: '#475053' }} />
-      </h1>
-      <div className="d-flex justify-content-center align-items-center" id="aLinks">
-        <div className="text-center m-4">
-          <a href="https://wa.me/16505446183" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp id="contactIcons" size={50} style={{ color: '#475053' }} />
-            <div>WhatsApp</div>
-          </a>
-        </div>
-        <div className="text-center m-4">
-          <a href="mailto:rainer.erik70@gmail.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope id="contactIcons" size={50} style={{ color: '#475053' }} />
-            <div>Email</div>
-          </a>
-        </div>
+    <div className="contact-container">
+      {/* LEFT PANEL: Contact Form */}
+      <div className="contact-right-panel">
+        <h1>Contact Me</h1>
+        <p className="contact-description text-center mb-5">
+          We’d love to hear from you! Reach out in the way that works best for you, and we’ll respond as soon as possible.
+        </p>
+        <form className="contact-form" onSubmit={handleFormSubmit}>
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Full Name*"
+            value={fullName}
+            onChange={handleInputChange}
+            className="form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email*"
+            value={email}
+            onChange={handleInputChange}
+            className="form-input"
+            required
+          />
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="Mobile Phone"
+            value={mobile}
+            onChange={handleInputChange}
+            className="form-input"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Questions, Comments or Concerns..."
+            value={message}
+            onChange={handleInputChange}
+            className="form-textarea"
+            required
+          />
+          <button type="submit" className="submit-button">
+            Send Feedback
+          </button>
+        </form>
+
+        {isSubmitted && (
+          <div className="alert success-alert">Email sent successfully!</div>
+        )}
+        {errorMessage && (
+          <div className="alert error-alert">{errorMessage}</div>
+        )}
       </div>
-      <div className="container mt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <form className="form-group" onSubmit={handleFormSubmit}>
-              <input
-                value={name}
-                name="name"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Name"
-                className="form-control mb-3"
-                required
-              />
-              <input
-                value={email}
-                name="email"
-                onChange={handleInputChange}
-                type="email"
-                placeholder="Email"
-                className="form-control mb-3"
-                required
-              />
-              <input
-                value={subject}
-                name="subject"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Subject"
-                className="form-control mb-3"
-                required
-              />
-              <textarea
-                value={message}
-                name="message"
-                onChange={handleInputChange}
-                placeholder="Message"
-                className="form-control mb-3"
-                style={{ height: '120px' }}
-                required
-              />
-              <button type="submit" className="btn btn-outline-primary">Send Feedback</button>
-            </form>
-            {isSubmitted && (
-              <div className="alert alert-success mt-3">
-                Email sent successfully!
-              </div>
-            )}
-            {errorMessage && (
-              <div className="alert alert-danger mt-3">
-                {errorMessage}
-              </div>
-            )}
+
+      {/* RIGHT PANEL: Contact Info */}
+      <div className="contact-right-panel">
+        <h2>Contact Information</h2>
+        <div className="info-item">
+          <FaMapMarkerAlt size={30} className="info-icon" />
+          <div>
+            <strong>Location:</strong>
+            <p>Clayton, CA, USA</p>
+          </div>
+        </div>
+        <div className="info-item">
+          <FaPhone size={30} className="info-icon" />
+          <div>
+            <strong>Phone:</strong>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div className="info-item">
+          <FaAt size={30} className="info-icon" />
+          <div>
+            <strong>Email:</strong>
+            <p>contact@example.com</p>
           </div>
         </div>
       </div>
